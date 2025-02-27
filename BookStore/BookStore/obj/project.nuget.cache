@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4R4cbHvTkgY=",
+  "success": true,
+  "projectFilePath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj",
+  "expectedPackageFiles": [
+    "/Users/adelinaa/.nuget/packages/microsoft.aspnetcore.openapi/9.0.2/microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "/Users/adelinaa/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

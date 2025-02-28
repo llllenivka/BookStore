@@ -4,14 +4,14 @@
     "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj": {}
   },
   "projects": {
-    "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj": {
+    "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.Core/BookStore.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj",
-        "projectName": "BookStore",
-        "projectPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj",
+        "projectUniqueName": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.Core/BookStore.Core.csproj",
+        "projectName": "BookStore.Core",
+        "projectPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.Core/BookStore.Core.csproj",
         "packagesPath": "/Users/adelinaa/.nuget/packages/",
-        "outputPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/obj/",
+        "outputPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/adelinaa/.nuget/NuGet/NuGet.Config"
@@ -43,8 +43,154 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.DAL/BookStore.DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.DAL/BookStore.DAL.csproj",
+        "projectName": "BookStore.DAL",
+        "projectPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.DAL/BookStore.DAL.csproj",
+        "packagesPath": "/Users/adelinaa/.nuget/packages/",
+        "outputPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.DAL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/adelinaa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.Core/BookStore.Core.csproj": {
+                "projectPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.Core/BookStore.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj",
+        "projectName": "BookStore",
+        "projectPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/BookStore.csproj",
+        "packagesPath": "/Users/adelinaa/.nuget/packages/",
+        "outputPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/adelinaa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.DAL/BookStore.DAL.csproj": {
+                "projectPath": "/Users/adelinaa/Documents/BookStore/BookStore/BookStore.DAL/BookStore.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.2, )"
             }

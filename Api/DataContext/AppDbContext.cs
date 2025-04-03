@@ -1,9 +1,11 @@
+using Api.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal;
 
-namespace Api.Data;
+namespace Api.DataContext;
 
 public class AppDbContext : DbContext
 {
-    private  ISqliteRelationalConnection _connection
+    public DbSet<Book> Books { get; set; }
+    
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 }

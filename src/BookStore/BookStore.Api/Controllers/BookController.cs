@@ -51,7 +51,7 @@ public class BookController : ControllerBase
     {
         var deletedBook = await _bookService.DeleteBookAsync(id);
         if (deletedBook == null) return NotFound();
-        return Ok(deletedBook);
+        return NoContent();
     }
     
     

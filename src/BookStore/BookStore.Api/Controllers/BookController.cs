@@ -34,6 +34,7 @@ public class BookController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<BookResponseDto>> CreateBook(BookRequestDto book)
     {
+        if (!ModelState.IsValid) return BadRequest();
         var newBook = await _bookService.AddBookAsync(book);
         return CreatedAtAction(nameof(GetBookById), new { id = newBook.Id }, newBook);
     }
@@ -41,6 +42,7 @@ public class BookController : ControllerBase
     [HttpPut("{id}")]
     public async Task<ActionResult<BookResponseDto>> UpdateBook(Guid id, BookRequestDto book)
     {
+        if (!ModelState.IsValid) return BadRequest();
         var updatedBook = await _bookService.UpdateBookAsync(id, book);
         if (updatedBook == null) return NotFound();
         return Ok(updatedBook);

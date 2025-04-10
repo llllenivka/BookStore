@@ -1,0 +1,24 @@
+.book-card {
+    border: 1px solid;
+
+    width: 250px;
+    height: 380px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-card img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid red;
+}
+
+.book-card-group-btn {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+}

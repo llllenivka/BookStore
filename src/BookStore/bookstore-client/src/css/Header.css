@@ -1,0 +1,42 @@
+.header {
+    background-color: #FFFFFF;
+    color: #F55FB2;
+    border: 2px solid;
+
+    border-radius: 40px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    align-content: center;
+}
+
+.header h1 {
+    margin: 15px;
+    font-size: 25px;
+}
+
+.header input {
+    background-color: #eeecec;
+    border: 0px;
+
+    text-align: right;
+    color: #5e5d5d;
+    
+    width: 55%;
+    height: 45px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.header button {
+    background-color: #F55FB2;
+    color: #FFFFFF;
+    border: 0px;
+
+    width: 15%;
+    height: 45px;
+    border-radius: 20px; 
+    margin: 5px;
+}

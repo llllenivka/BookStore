@@ -7,4 +7,14 @@ export const getBooks = async() => {
     return response.data;
 }
 
+export const getBookDetails = async (bookId) => {
+    try {
+        const response = await axios.get(`${API_URL}/${bookId}`);
+        return response.data;
+    } catch (error) {
+        console.error('Ошибка при получении книги: ', error);
+        throw error;
+    }
+}
+
 

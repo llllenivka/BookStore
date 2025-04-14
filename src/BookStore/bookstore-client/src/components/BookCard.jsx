@@ -1,5 +1,5 @@
-import './../css/BookCard.css';
 import './../css/App.css'
+import './../css/BookCard.css';
 import { useNavigate } from 'react-router-dom';
 
 function BookCard(props) {
@@ -12,18 +12,18 @@ function BookCard(props) {
 
     return (
         <div className="book-card">
-            <img src={props.book.coverImageUrl} alt={props.book.title}></img>
-            <div className='book-card-grpoup-text'>
-                <h3 className='book-card-text'>{props.book.price} ₽</h3>
-                <p className='book-card-text'>{props.book.title}</p>
-                <p className='book-card-text'>{props.book.author}</p>
+            <img className='book-card__image' src={props.book.coverImageUrl} alt={props.book.title}></img>
+            <div className='book-card__content'>
+                <h3 className='book-card__text'>{props.book.price} ₽</h3>
+                <p className='book-card__text'>{props.book.title}</p>
+                <p className='book-card__text'>{props.book.author}</p>
             </div>
-            <div className='book-card-group-btn '>
-                <button className='btn'>В корзину</button>
-                <button className='btn'>Нравится</button>
+            <div className='book-card__actions'>
+                <button className='btn-pink'>В корзину</button>
+                <button className='btn-orange'>♡</button>
                 <button 
                     onClick={handleDetailsClick}
-                    className='book-card-group_btn-more btn'>
+                    className='btn-pink book-card__more-btn'>
                         Подробнее
                 </button>
             </div>

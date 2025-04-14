@@ -21,7 +21,6 @@ function BookList() {
         fetchBooks();
     }, []);
 
-    console.log(books.length);
     return (
         <div className="book-list">
             {   

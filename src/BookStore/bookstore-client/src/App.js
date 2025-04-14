@@ -9,9 +9,10 @@ import BookDetailsPage from './components/BookDetailsPage';
 function App() {
   return (
     <div className='app'>
-      <BookList />
+     
       <Routes>
-        <Route path="/:id" element={<BookDetailsPage />} />
+        <Route path='/' element={ <BookList />}></Route>
+        <Route path=":id" element={<BookDetailsPage />} />
       </Routes>
     </div>
   )

@@ -1,11 +1,14 @@
 .app {
     width: 100%;
     height: 100%;
-    padding: 20px;
+
     /* background-color: #ff90f8; */
 }
 
-.btn {
+
+/* ------- BUTTONS ------- */
+
+.btn-pink {
     background-color: rgb(245, 135, 232);
     color: white;
     border: 0px;
@@ -14,6 +17,30 @@
     transition: all 0.2s ease;
 }
 
-.btn:hover{
-    background-color: #89238e;
+.btn-pink:hover{
+    background-color: #f54ffe;
+}
+
+.btn-orange {
+    background-color: white;
+    border: 2px solid #F48D65;
+    color: #F48D65;
+
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-orange:hover {
+    background-color: #F48D65;
+    color: white;
+}
+
+/* ------- TEXT ------- */
+
+.txt-grey {
+    color: #454e89;
+}
+
+.txt-pink {
+    color: #F55FB3;
 }

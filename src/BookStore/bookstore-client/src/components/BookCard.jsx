@@ -1,8 +1,15 @@
 import './../css/BookCard.css';
 import './../css/App.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 
 function BookCard(props) {
+
+    const navigate = useNavigate();
+
+    const handleDetailsClick = () => {
+        navigate(`/${props.book.id}`);
+    };
+
     return (
         <div className="book-card">
             <img src={props.book.coverImageUrl} alt={props.book.title}></img>
@@ -14,7 +21,11 @@ function BookCard(props) {
             <div className='book-card-group-btn '>
                 <button className='btn'>В корзину</button>
                 <button className='btn'>Нравится</button>
-                <button className='book-card-group_btn-more btn'>Подробнее</button>
+                <button 
+                    onClick={handleDetailsClick}
+                    className='book-card-group_btn-more btn'>
+                        Подробнее
+                </button>
             </div>
         </div>
     )

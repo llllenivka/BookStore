@@ -1,4 +1,4 @@
-namespace BookStore.Api.Domain;
+namespace BookStore.Api.Domain.Enums;
 
 public enum UserRole
 {

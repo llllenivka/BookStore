@@ -1,3 +1,5 @@
+using BookStore.Api.Domain.Enums;
+
 namespace BookStore.Api.Domain.Entities;
 
 public class User
@@ -6,6 +8,7 @@ public class User
     public string Name { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
+    public UserRole Role { get; set; } = UserRole.Customer;
     public Guid CartId { get; set; }
     public Guid FavoriteBooksId { get; set; }
 }

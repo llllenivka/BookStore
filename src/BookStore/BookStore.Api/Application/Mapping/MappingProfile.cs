@@ -10,5 +10,7 @@ public class MappingProfile : Profile
     {
         CreateMap<BookRequestDto, Book>();
         CreateMap<Book, BookResponseDto>();
+        CreateMap<UserRequestDto, User>();
+        CreateMap<User, UserResponseDto>();
     }
 }

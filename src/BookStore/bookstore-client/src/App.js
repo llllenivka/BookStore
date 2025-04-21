@@ -9,7 +9,6 @@ import BookDetailsPage from './components/BookDetailsPage';
 function App() {
   return (
     <div className='app'>
-     
       <Routes>
         <Route path='/' element={ <BookList />}></Route>
         <Route path=":id" element={<BookDetailsPage />} />

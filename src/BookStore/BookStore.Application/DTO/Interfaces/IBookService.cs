@@ -1,6 +1,6 @@
-using BookStore.Api.Application.DTO;
+using BookStore.Application.DTO;
 
-namespace BookStore.Api.Application.Interfaces;
+namespace BookStore.Application.DTO.Interfaces;
 
 public interface IBookService
 {

@@ -1,11 +1,11 @@
 using AutoMapper;
-using BookStore.Api.Application.DTO;
-using BookStore.Api.Application.Interfaces;
-using BookStore.Api.Domain.Entities;
-using BookStore.Api.Infrastructure.Data;
+using BookStore.Application.DTO;
+using BookStore.Application.DTO.Interfaces;
+using BookStore.Domain.Entities;
+using BookStore.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookStore.Api.Application.Services;
+namespace BookStore.Application.Services;
 
 public class BookService : IBookService
 {

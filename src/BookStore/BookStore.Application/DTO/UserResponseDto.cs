@@ -1,14 +1,11 @@
-using BookStore.Api.Domain.Enums;
+namespace BookStore.Application.DTO;
 
-namespace BookStore.Api.Domain.Entities;
-
-public class User
+public class UserResponseDto
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-    public UserRole Role { get; set; } = UserRole.Customer;
     public Guid CartId { get; set; }
     public Guid FavoriteBooksId { get; set; }
 }

@@ -1,9 +1,8 @@
-using System.ComponentModel.DataAnnotations;
+namespace BookStore.Application.DTO;
 
-namespace BookStore.Api.Application.DTO;
-
-public class BookRequestDto
+public class BookResponseDto
 {
+    public Guid Id { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Author { get; set; } = string.Empty;
     public string?  Description { get; set; }

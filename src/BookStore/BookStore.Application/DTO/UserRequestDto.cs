@@ -1,6 +1,6 @@
-using BookStore.Api.Domain.Enums;
+using BookStore.Domain.Enums;
 
-namespace BookStore.Api.Application.DTO;
+namespace BookStore.Application.DTO;
 
 public class UserRequestDto
 {

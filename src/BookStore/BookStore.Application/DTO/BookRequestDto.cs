@@ -1,8 +1,9 @@
-namespace BookStore.Api.Domain.Entities;
+using System.ComponentModel.DataAnnotations;
 
-public class Book
+namespace BookStore.Application.DTO;
+
+public class BookRequestDto
 {
-    public Guid Id { get; set; } = Guid.NewGuid();
     public string Title { get; set; } = string.Empty;
     public string Author { get; set; } = string.Empty;
     public string?  Description { get; set; }

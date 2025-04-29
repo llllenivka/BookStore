@@ -1,8 +1,7 @@
-using BookStore.Api.Domain.Entities;
-using BookStore.Api.Domain.Enums;
+using BookStore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookStore.Api.Infrastructure.Data;
+namespace BookStore.Infrastructure.Data;
 
 public class BookStoreDbContext : DbContext
 {

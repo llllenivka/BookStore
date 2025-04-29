@@ -1,8 +1,8 @@
-using BookStore.Api.Application.DTO.Vlidators;
-using BookStore.Api.Application.Interfaces;
-using BookStore.Api.Application.Mapping;
-using BookStore.Api.Application.Services;
-using BookStore.Api.Infrastructure.Data;
+using BookStore.Application.DTO.Vlidators;
+using BookStore.Application.DTO.Interfaces;
+using BookStore.Application.Mapping;
+using BookStore.Application.Services;
+using BookStore.Infrastructure.Data;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Cors;

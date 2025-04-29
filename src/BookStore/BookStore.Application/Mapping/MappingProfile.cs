@@ -1,8 +1,8 @@
 using AutoMapper;
-using BookStore.Api.Application.DTO;
-using BookStore.Api.Domain.Entities;
+using BookStore.Application.DTO;
+using BookStore.Domain.Entities;
 
-namespace BookStore.Api.Application.Mapping;
+namespace BookStore.Application.Mapping;
 
 public class MappingProfile : Profile
 {

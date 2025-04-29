@@ -18,15 +18,15 @@
           }
         }
       },
-      "FluentValidation/11.5.1": {
+      "FluentValidation/12.0.0-preview1": {
         "type": "package",
         "compile": {
-          "lib/net7.0/FluentValidation.dll": {
+          "lib/net8.0/FluentValidation.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/FluentValidation.dll": {
+          "lib/net8.0/FluentValidation.dll": {
             "related": ".xml"
           }
         }
@@ -1067,6 +1067,47 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "BookStore.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "AutoMapper": "14.0.0",
+          "BookStore.Domain": "1.0.0",
+          "BookStore.Infrastructure": "1.0.0",
+          "FluentValidation": "12.0.0-preview1"
+        },
+        "compile": {
+          "bin/placeholder/BookStore.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStore.Application.dll": {}
+        }
+      },
+      "BookStore.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/BookStore.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStore.Domain.dll": {}
+        }
+      },
+      "BookStore.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BookStore.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
+        },
+        "compile": {
+          "bin/placeholder/BookStore.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BookStore.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1086,27 +1127,19 @@
         "lib/net8.0/AutoMapper.xml"
       ]
     },
-    "FluentValidation/11.5.1": {
-      "sha512": "0h1Q5lNOLLyYTWMJmyNoMqhY4CBRvvUWvJP1R4F2CnmmzuWwvB0A8aVmw5+lOuwYnwUwCRrdeMLbc81F38ahNQ==",
+    "FluentValidation/12.0.0-preview1": {
+      "sha512": "sFp+S7r98V0RQd6Ws9ecFTneWGGMK69XA4Wq+2ZxuNzoRTcs6AbZFyb+pfCwOUx4zgJiKf6BjcFSQrrAaxn+Dw==",
       "type": "package",
-      "path": "fluentvalidation/11.5.1",
+      "path": "fluentvalidation/12.0.0-preview1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.5.1.nupkg.sha512",
+        "fluentvalidation.12.0.0-preview1.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net5.0/FluentValidation.dll",
-        "lib/net5.0/FluentValidation.xml",
-        "lib/net6.0/FluentValidation.dll",
-        "lib/net6.0/FluentValidation.xml",
-        "lib/net7.0/FluentValidation.dll",
-        "lib/net7.0/FluentValidation.xml",
-        "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.xml",
-        "lib/netstandard2.1/FluentValidation.dll",
-        "lib/netstandard2.1/FluentValidation.xml"
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml"
       ]
     },
     "FluentValidation.AspNetCore/11.3.0": {
@@ -3326,11 +3359,27 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "BookStore.Application/1.0.0": {
+      "type": "project",
+      "path": "../BookStore.Application/BookStore.Application.csproj",
+      "msbuildProject": "../BookStore.Application/BookStore.Application.csproj"
+    },
+    "BookStore.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BookStore.Domain/BookStore.Domain.csproj",
+      "msbuildProject": "../BookStore.Domain/BookStore.Domain.csproj"
+    },
+    "BookStore.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../BookStore.Infrastructure/BookStore.Infrastructure.csproj",
+      "msbuildProject": "../BookStore.Infrastructure/BookStore.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "AutoMapper >= 14.0.0",
+      "BookStore.Application >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.3.0",
       "Microsoft.EntityFrameworkCore >= 9.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.4",
@@ -3362,7 +3411,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Application/BookStore.Application.csproj": {
+              "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Application/BookStore.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

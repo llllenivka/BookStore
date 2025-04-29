@@ -136,3 +136,9 @@
 /Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/FluentValidation.dll
 /Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/FluentValidation.AspNetCore.dll
 /Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Application.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Domain.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Infrastructure.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Application.pdb
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Domain.pdb
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Infrastructure.pdb

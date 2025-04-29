@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace BookStore.Api.Application.DTO.Vlidators;
+namespace BookStore.Application.DTO.Vlidators;
 
 public class BookRequestDtoValidator : AbstractValidator<BookRequestDto>
 {

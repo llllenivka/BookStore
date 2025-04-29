@@ -9,6 +9,7 @@
       "BookStore.Api/1.0.0": {
         "dependencies": {
           "AutoMapper": "14.0.0",
+          "BookStore.Application": "1.0.0",
           "FluentValidation.AspNetCore": "11.3.0",
           "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.Design": "9.0.4",
@@ -30,17 +31,17 @@
           }
         }
       },
-      "FluentValidation/11.5.1": {
+      "FluentValidation/12.0.0-preview1": {
         "runtime": {
-          "lib/net7.0/FluentValidation.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.5.1.0"
+          "lib/net8.0/FluentValidation.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.0.0"
           }
         }
       },
       "FluentValidation.AspNetCore/11.3.0": {
         "dependencies": {
-          "FluentValidation": "11.5.1",
+          "FluentValidation": "12.0.0-preview1",
           "FluentValidation.DependencyInjectionExtensions": "11.5.1"
         },
         "runtime": {
@@ -52,7 +53,7 @@
       },
       "FluentValidation.DependencyInjectionExtensions/11.5.1": {
         "dependencies": {
-          "FluentValidation": "11.5.1",
+          "FluentValidation": "12.0.0-preview1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.4"
         },
         "runtime": {
@@ -700,7 +701,42 @@
           }
         }
       },
-      "System.Threading.Channels/7.0.0": {}
+      "System.Threading.Channels/7.0.0": {},
+      "BookStore.Application/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "14.0.0",
+          "BookStore.Domain": "1.0.0",
+          "BookStore.Infrastructure": "1.0.0",
+          "FluentValidation": "12.0.0-preview1"
+        },
+        "runtime": {
+          "BookStore.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "BookStore.Domain/1.0.0": {
+        "runtime": {
+          "BookStore.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "BookStore.Infrastructure/1.0.0": {
+        "dependencies": {
+          "BookStore.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.4",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
+        },
+        "runtime": {
+          "BookStore.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -716,12 +752,12 @@
       "path": "automapper/14.0.0",
       "hashPath": "automapper.14.0.0.nupkg.sha512"
     },
-    "FluentValidation/11.5.1": {
+    "FluentValidation/12.0.0-preview1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0h1Q5lNOLLyYTWMJmyNoMqhY4CBRvvUWvJP1R4F2CnmmzuWwvB0A8aVmw5+lOuwYnwUwCRrdeMLbc81F38ahNQ==",
-      "path": "fluentvalidation/11.5.1",
-      "hashPath": "fluentvalidation.11.5.1.nupkg.sha512"
+      "sha512": "sha512-sFp+S7r98V0RQd6Ws9ecFTneWGGMK69XA4Wq+2ZxuNzoRTcs6AbZFyb+pfCwOUx4zgJiKf6BjcFSQrrAaxn+Dw==",
+      "path": "fluentvalidation/12.0.0-preview1",
+      "hashPath": "fluentvalidation.12.0.0-preview1.nupkg.sha512"
     },
     "FluentValidation.AspNetCore/11.3.0": {
       "type": "package",
@@ -1065,6 +1101,21 @@
       "sha512": "sha512-qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
       "path": "system.threading.channels/7.0.0",
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
+    },
+    "BookStore.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BookStore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BookStore.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

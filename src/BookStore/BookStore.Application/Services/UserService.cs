@@ -1,20 +1,28 @@
 using AutoMapper;
-using BookStore.Infrastructure.Data;
+using BookStore.Application.DTO;
+using BookStore.Core.Entities;
+// using BookStore.Infrastructure.Data;
 
 namespace BookStore.Application.Services;
 
-public class UserService
-{
-    private readonly BookStoreDbContext _context;
-    private readonly IMapper _mapper;
-
-    public UserService(IMapper mapper, BookStoreDbContext context)
-    {
-        _mapper = mapper;
-        _context = context;
-    }
-    
-
+// public class UserService : IUserService
+// {
+    // private readonly BookStoreDbContext _context;
+    // private readonly IMapper _mapper;
+    //
+    // public UserService(IMapper mapper, BookStoreDbContext context)
+    // {
+    //     _mapper = mapper;
+    //     _context = context;
+    // }
+    //
+    // public async Task Register(UserRequestDto newUser)
+    // {
+    //     var user = _mapper.Map<User>(newUser);
+    //     
+    // }
+    //
+    //
     // public async Task<UserResponseDto> GetUserByEmailAsync(string email)
     // {
     //     var user = await _context.Users.FirstOrDefault(u => u.Email == email); 
@@ -22,4 +30,4 @@ public class UserService
     //     
     //     return Task.FromResult(userResponseDto);
     // }
-}
+// }

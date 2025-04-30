@@ -1,6 +1,6 @@
-using BookStore.Domain.Enums;
+using BookStore.Core;
 
-namespace BookStore.Domain.Entities;
+namespace BookStore.Core.Entities;
 
 public class User
 {
@@ -8,5 +8,5 @@ public class User
     public string Username { get; set; }
     public string Email { get; set; }
     public string PasswordHash { get; set; }
-    public UserRole Role { get; set; } = UserRole.Customer;
+    public string Role { get; set; }
 }

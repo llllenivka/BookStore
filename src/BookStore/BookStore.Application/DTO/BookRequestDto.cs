@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace BookStore.Application.DTO;
 
 public class BookRequestDto

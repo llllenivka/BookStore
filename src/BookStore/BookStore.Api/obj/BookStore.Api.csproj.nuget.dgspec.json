@@ -28,6 +28,9 @@
             "projectReferences": {
               "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Application/BookStore.Application.csproj": {
                 "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Application/BookStore.Application.csproj"
+              },
+              "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Infrastructure/BookStore.Infrastructure.csproj": {
+                "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Infrastructure/BookStore.Infrastructure.csproj"
               }
             }
           }
@@ -120,11 +123,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/BookStore.Domain.csproj": {
-                "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/BookStore.Domain.csproj"
-              },
-              "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Infrastructure/BookStore.Infrastructure.csproj": {
-                "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Infrastructure/BookStore.Infrastructure.csproj"
+              "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/BookStore.Core.csproj": {
+                "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/BookStore.Core.csproj"
               }
             }
           }
@@ -174,14 +174,14 @@
         }
       }
     },
-    "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/BookStore.Domain.csproj": {
+    "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/BookStore.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/BookStore.Domain.csproj",
-        "projectName": "BookStore.Domain",
-        "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/BookStore.Domain.csproj",
+        "projectUniqueName": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/BookStore.Core.csproj",
+        "projectName": "BookStore.Core",
+        "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/BookStore.Core.csproj",
         "packagesPath": "/Users/adelinaa/.nuget/packages/",
-        "outputPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/obj/",
+        "outputPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/adelinaa/.nuget/NuGet/NuGet.Config"
@@ -255,8 +255,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/BookStore.Domain.csproj": {
-                "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Domain/BookStore.Domain.csproj"
+              "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/BookStore.Core.csproj": {
+                "projectPath": "/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Core/BookStore.Core.csproj"
               }
             }
           }
@@ -277,6 +277,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.4, )"

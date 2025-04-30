@@ -1,4 +1,4 @@
-namespace BookStore.Domain.Entities;
+namespace BookStore.Core.Entities;
 
 public class Book
 {

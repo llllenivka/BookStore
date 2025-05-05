@@ -31,7 +31,7 @@ public class UserController : ControllerBase
     }
     
     [HttpPost("login")]
-    public async Task<ActionResult<string>> Login([FromBody] string email, [FromQuery] string password)
+    public async Task<ActionResult<string>> Login([FromQuery] string email, [FromQuery] string password)
     {
         var token = await _userService.Login(email, password);
         if(token == null) return Unauthorized();

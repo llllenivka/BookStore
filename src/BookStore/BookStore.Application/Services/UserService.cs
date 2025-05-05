@@ -38,7 +38,7 @@ public class UserService : IUserService
     public async Task<bool> Register(UserRequestDto newUser)
     {
         var hashed = _passwordHasher.GenerateHash(newUser.Password);
-        // newUser.Password = hashed;
+
         var user = new User
         {
             Email = newUser.Email,
@@ -54,10 +54,10 @@ public class UserService : IUserService
     public async Task<string> Login(string email, string password)
     {
         var user = await _userRepository.GetUserByEmailAsync(email);
-        if(user == null) return null;
+        if (user == null) return null;
         
-        var result = _passwordHasher.VerifyHash(password, _passwordHasher.GenerateHash(password));
-        if(result == false) return null;
+        var result = _passwordHasher.VerifyHash(password, user.PasswordHash);
+        if (result == false) return null;
  
         return _jwtTokenGenerator.GenerateToken(user);
     }

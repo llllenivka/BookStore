@@ -4,6 +4,7 @@ namespace BookStore.Core.Interfaces;
 
 public interface IUserRepository
 {
-    Task Register(User newUser);
+    Task<IEnumerable<User>> GetUsers();
     Task<User> GetUserByEmailAsync(string email);
+    Task<bool> Register(User newUser);
 }

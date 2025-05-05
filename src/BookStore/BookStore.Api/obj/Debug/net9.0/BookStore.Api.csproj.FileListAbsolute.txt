@@ -143,3 +143,11 @@
 /Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BCrypt.Net-Next.dll
 /Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Core.dll
 /Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/BookStore.Core.pdb
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/adelinaa/Documents/projects/BookStore/src/BookStore/BookStore.Api/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll

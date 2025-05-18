@@ -1,5 +1,6 @@
 using BookStore.Application.DTO;
 using BookStore.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Api.Controllers;
@@ -31,6 +32,7 @@ public class BookController : ControllerBase
         return Ok(book);
     }
 
+    [Authorize]
     [HttpPost]
     public async Task<ActionResult<BookResponseDto>> CreateBook(BookRequestDto book)
     {
@@ -39,6 +41,7 @@ public class BookController : ControllerBase
         return CreatedAtAction(nameof(GetBookById), new { id = newBook.Id }, newBook);
     }
 
+    [Authorize]
     [HttpPut("{id}")]
     public async Task<ActionResult<BookResponseDto>> UpdateBook(Guid id, BookRequestDto book)
     {
@@ -48,6 +51,7 @@ public class BookController : ControllerBase
         return Ok(updatedBook);
     }
 
+    [Authorize]
     [HttpDelete("{id}")]
     public async Task<ActionResult<BookResponseDto>> DeleteBook(Guid id)
     {

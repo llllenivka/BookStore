@@ -1,10 +1,4 @@
-using System.Text;
 using BookStore.Api.Extensions;
-using BookStore.Application.DTO.Vlidators;
-using BookStore.Infrastructure;
-using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 
 namespace BookStore.Api;
 
@@ -25,17 +19,9 @@ public class Program
         // builder.Services.AddEndpointsApiExplorer();
         
         
-        
         var app = builder.Build();
-        
-        app.UseSwagger();
-        app.UseSwaggerUI();
-        
-        app.UseCors("AllowReactApp");
+        app.UseCustomMiddleware();
         app.MapControllers();
-
-        app.UseAuthentication();
-        app.UseAuthorization();
 
         app.Run();
     }

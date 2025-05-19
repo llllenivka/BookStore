@@ -1,6 +1,5 @@
 using BookStore.Application.DTO;
 using BookStore.Application.Services;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Api.Controllers;
@@ -31,11 +30,24 @@ public class UserController : ControllerBase
     }
     
     [HttpPost("login")]
-    public async Task<ActionResult<string>> Login([FromQuery] string email, [FromQuery] string password)
+    public async Task<ActionResult<string>> Login([FromBody] LoginUserRequestDto user)
     {
-        var token = await _userService.Login(email, password);
+        var token = await _userService.Login(user.Email, user.Password);
         if(token == null) return Unauthorized();
+        
+        HttpContext.Response.Cookies.Append(
+            "kakoi-to-kluch",
+            token,
+            new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(2)
+            });
         return Ok(token);
     }
+    
+    
     
 }

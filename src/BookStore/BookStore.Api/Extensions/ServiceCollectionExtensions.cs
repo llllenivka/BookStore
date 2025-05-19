@@ -9,6 +9,7 @@ using BookStore.Infrastructure.Repositories;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 namespace BookStore.Api.Extensions;
@@ -53,23 +54,33 @@ public static class ServiceCollectionExtensions
         return services;
     }
 
-    public static IServiceCollection AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddJwtAuthentication(
+        this IServiceCollection services,
+        IConfiguration configuration,
+        IConfigurationSection jwtConfig)
     {
+        services.Configure<JwtOptions>(jwtConfig);
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+            .AddJwtBearer(options =>
             {
-                options.TokenValidationParameters = new()
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = false,
                     ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:SecretKey"]))
+                    IssuerSigningKey = new SymmetricSecurityKey(
+                        Encoding.UTF8.GetBytes(jwtConfig["SecretKey"]))
+                };
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        context.Token = context.Request.Cookies["kakoi-to-kluch"];
+                        return Task.CompletedTask;
+                    }
                 };
             });
-        
-        services.AddAuthorization();
-        
         return services;
     }
 
@@ -91,7 +102,8 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddValidationAndMapping(this IServiceCollection services)
     {
         services.AddAutoMapper(typeof(BookStore.Application.Mapping.MappingProfile));
-        
+
+        services.AddEndpointsApiExplorer();
         services.AddControllers()
             .AddFluentValidation(v =>
             {

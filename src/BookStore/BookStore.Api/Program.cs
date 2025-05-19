@@ -11,12 +11,12 @@ public class Program
             .AddRepositories()
             .AddDatabase(builder.Configuration)
             .AddSecurityServices(builder.Configuration)
-            .AddJwtAuthentication(builder.Configuration)
+            .AddJwtAuthentication(builder.Configuration, builder.Configuration.GetSection("Jwt"))
             .AddCustomCors()
             .AddValidationAndMapping()
             .AddCustomSwagger();
         
-        // builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddEndpointsApiExplorer();
         
         
         var app = builder.Build();

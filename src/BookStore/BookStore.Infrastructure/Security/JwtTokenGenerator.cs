@@ -13,7 +13,13 @@ public class JwtTokenGenerator(IOptions<JwtOptions> options) : IJwtTokenGenerato
 
     public string GenerateToken(User user)
     {
-        Claim[] claims = [new ("userid", user.Id.ToString())];
+        // Claim[] claims = [new ("userId", user.Id.ToString()), new Claim(ClaimTypes.Role, user.Role.ToString())];
+
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Role, user.Role)
+        };
         
         var signingCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SecretKey)), SecurityAlgorithms.HmacSha256);

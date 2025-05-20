@@ -34,6 +34,7 @@ public class UserController : ControllerBase
     {
         var token = await _userService.Login(user.Email, user.Password);
         if(token == null) return Unauthorized();
+
         
         HttpContext.Response.Cookies.Append(
             "kakoi-to-kluch",

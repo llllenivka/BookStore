@@ -81,6 +81,11 @@ public static class ServiceCollectionExtensions
                     }
                 };
             });
+        
+        // services.AddAuthorization(options =>
+        // {
+        //     options.AddPolicy("Admin", policy => policy.RequireClaim("Admin"));
+        // });
         return services;
     }
 

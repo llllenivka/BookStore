@@ -32,7 +32,7 @@ public class BookController : ControllerBase
         return Ok(book);
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [HttpPost]
     public async Task<ActionResult<BookResponseDto>> CreateBook(BookRequestDto book)
     {
@@ -41,7 +41,7 @@ public class BookController : ControllerBase
         return CreatedAtAction(nameof(GetBookById), new { id = newBook.Id }, newBook);
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [HttpPut("{id}")]
     public async Task<ActionResult<BookResponseDto>> UpdateBook(Guid id, BookRequestDto book)
     {
@@ -51,7 +51,7 @@ public class BookController : ControllerBase
         return Ok(updatedBook);
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]
     public async Task<ActionResult<BookResponseDto>> DeleteBook(Guid id)
     {

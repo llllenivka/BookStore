@@ -9,7 +9,7 @@
 /* ------- BUTTONS ------- */
 
 .btn-pink {
-    background-color: rgb(245, 135, 232);
+    background-color: rgb(120,76,192);
     color: white;
     border: 0px;
 
@@ -18,27 +18,27 @@
 }
 
 .btn-pink:hover{
-    background-color: #f54ffe;
+    background-color: rgb(230,159,236);
 }
 
 .btn-orange {
     background-color: white;
-    border: 2px solid #F48D65;
-    color: #F48D65;
+    border: 2px solid rgb(242,131,138);
+    color: rgb(242,131,138);
 
     border-radius: 5px;
     transition: all 0.2s ease;
 }
 
 .btn-orange:hover {
-    background-color: #F48D65;
+    background-color: rgb(242,131,138);
     color: white;
 }
 
 /* ------- TEXT ------- */
 
 .txt-grey {
-    color: #454e89;
+    color: 	rgb(38,13,79);
 }
 
 .txt-pink {

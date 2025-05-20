@@ -1,6 +1,7 @@
 import './../css/App.css'
 import './../css/BookCard.css';
 import { useNavigate } from 'react-router-dom';
+import defaultImgBook from './../assets/images/default_book.png';
 
 function BookCard(props) {
 
@@ -10,9 +11,19 @@ function BookCard(props) {
         navigate(`/${props.book.id}`);
     };
 
+    const handleImageError = (e) => {
+        e.target.src = defaultImgBook;
+        e.target.onerror = null;
+        console.log("AAA");
+    };
+
     return (
         <div className="book-card">
-            <img className='book-card__image' src={props.book.coverImageUrl} alt={props.book.title}></img>
+            <img className='book-card__image' 
+                src={props.book.coverImageUrl } 
+                alt={props.book.title}
+                onError={handleImageError}
+                ></img>
             <div className='book-card__content'>
                 <h3 className='book-card__text'>{props.book.price} ₽</h3>
                 <p className='book-card__text'>{props.book.title}</p>

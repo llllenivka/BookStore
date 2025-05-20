@@ -1,9 +1,5 @@
 .header {
-    background-color: #FFFFFF;
-    color: #F55FB2;
-    border: 2px solid;
-
-    border-radius: 40px;
+    margin: 25px;
 
     display: flex;
     flex-wrap: nowrap;
@@ -14,29 +10,39 @@
 
 .header h1 {
     margin: 15px;
-    font-size: 25px;
+}
+
+.text_input {
+    padding: 2px;
 }
 
 .header input {
-    background-color: #eeecec;
     border: 0px;
-
-    text-align: right;
-    color: #5e5d5d;
     
     width: 55%;
     height: 45px;
-    border-radius: 20px;
+    border-radius: 30px;
     margin: 5px;
 }
 
-.header button {
-    background-color: #F55FB2;
-    color: #FFFFFF;
-    border: 0px;
 
+.header-button {
+    background-color: rgb(231,210,242);
+    
+    color: rgb(38,13,79);
+    font-weight: 600;
+    /* font-size:medium; */
+    border: 0px;
+    
     width: 15%;
     height: 45px;
-    border-radius: 20px; 
+    border-radius: 30px; 
     margin: 5px;
+}
+
+.header-btn-login {
+    background-color: rgb(38,13,79);
+
+    color: #FFFFFF;
+    border: 0px;
 }

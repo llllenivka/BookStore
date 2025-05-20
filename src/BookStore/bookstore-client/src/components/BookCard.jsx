@@ -14,7 +14,6 @@ function BookCard(props) {
     const handleImageError = (e) => {
         e.target.src = defaultImgBook;
         e.target.onerror = null;
-        console.log("AAA");
     };
 
     return (

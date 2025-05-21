@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { getBookDetails } from "../api/BookApi"
 import './../css/BookDetailsPage.css';
 import './../css/App.css';
+import { handleBookImageError } from './../utils/imageHandlers.js';
 
 
 function BookDetailsPage () {
@@ -32,7 +33,10 @@ function BookDetailsPage () {
             </div>
             <div className="book-details-page__content">
 
-                <img className="book-details-page__image" src={book.coverImageUrl} alt={book.title}></img>
+                <img className="book-details-page__image" 
+                    src={book.coverImageUrl} 
+                    alt={book.title}
+                    onError={handleBookImageError}></img>
 
                 <div className="book-details-page__details">
                     <h3>Аннотация</h3>

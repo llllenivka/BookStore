@@ -46,7 +46,7 @@ function BookDetailsPage () {
 
                 <div className="book-details-page__price">
                     <h3 className="">Цена: {book.price} ₽</h3>
-                    <button className="btn-pink">В корзину</button>
+                    <button className="btn-violet">В корзину</button>
                     <button className="btn-orange">Избранное</button>
                 </div>
 

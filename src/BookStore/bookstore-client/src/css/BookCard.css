@@ -1,7 +1,11 @@
 .book-card {
-    border-radius: 25px;
-    background-color: white;
+    /* border-radius: 25px;
+    background-color: rgb(235,212,233);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 2px solid rgb(216,172,210);
+    border-bottom: 2px solid rgb(216,172,210);
+    border-top: 3px solid 	rgb(253,240,239);
+    border-right: 3px solid rgb(253,240,239); */
 
     max-width: 250px;
     min-height: 400px;

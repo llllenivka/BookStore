@@ -17,7 +17,7 @@ function BookCard(props) {
     };
 
     return (
-        <div className="book-card">
+        <div className="book-card frame-pink">
             <img className='book-card__image' 
                 src={props.book.coverImageUrl } 
                 alt={props.book.title}
@@ -29,11 +29,11 @@ function BookCard(props) {
                 <p className='book-card__text'>{props.book.author}</p>
             </div>
             <div className='book-card__actions'>
-                <button className='btn-pink'>В корзину</button>
+                <button className='btn-violet'>В корзину</button>
                 <button className='btn-orange'>♡</button>
                 <button 
                     onClick={handleDetailsClick}
-                    className='btn-pink book-card__more-btn'>
+                    className='btn-violet book-card__more-btn'>
                         Подробнее
                 </button>
             </div>

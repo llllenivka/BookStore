@@ -1,12 +1,13 @@
 .header {
     margin: 25px;
+    height: 85px;
     
 
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 
-    align-content: center;
+    align-items: center;
 }
 
 .header h1 {

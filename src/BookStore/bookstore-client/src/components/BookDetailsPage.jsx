@@ -38,7 +38,7 @@ function BookDetailsPage () {
                     alt={book.title}
                     onError={handleBookImageError}></img>
 
-                <div className="book-details-page__details">
+                <div className="book-details-page__details frame-pink">
                     <h3>Аннотация</h3>
                     <p className="txt-grey">{book.description}</p>
                     <h3>Характеристики</h3>
@@ -48,7 +48,7 @@ function BookDetailsPage () {
                     <p className="txt-grey">Количество страниц: {book.pagesCount}</p>
                 </div>
 
-                <div className="book-details-page__price">
+                <div className="book-details-page__price frame-pink">
                     <h3 className="">Цена: {book.price} ₽</h3>
                     <button className="btn-violet">В корзину</button>
                     <button className="btn-orange">Избранное</button>

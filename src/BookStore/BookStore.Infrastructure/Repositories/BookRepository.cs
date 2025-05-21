@@ -37,7 +37,16 @@ public class BookRepository : IBookRepository
         var bookToUpdate = await _context.Books.FindAsync(id);
         if (bookToUpdate == null) return null;
 
-        _context.Entry(bookToUpdate).CurrentValues.SetValues(book);
+        // Console.WriteLine(book.Id);
+        // _context.Entry(bookToUpdate).CurrentValues.SetValues(book);
+        bookToUpdate.Title = book.Title;
+        bookToUpdate.Author = book.Author;
+        bookToUpdate.Description = book.Description;
+        bookToUpdate.Price = book.Price;
+        bookToUpdate.YearPublished = book.YearPublished;
+        bookToUpdate.PagesCount = book.PagesCount;
+        bookToUpdate.CoverImageUrl = book.CoverImageUrl;
+        
         await _context.SaveChangesAsync();
         
         return book;

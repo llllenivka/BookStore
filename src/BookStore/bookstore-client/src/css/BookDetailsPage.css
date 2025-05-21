@@ -23,21 +23,19 @@
 
 .book-details-page__price {
 
-    background-color: white;
+    /* background-color: white; */
 
     height: 120px;
     min-width: 200px;
     margin: 15px 15px;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 15px;
 
     display: grid;
     grid-template-rows: 2fr 1fr 1fr;
 }
 
 .book-details-page__details {
-    background-color: white;
-
     border-radius: 15px;
     padding: 20px;
     margin: 15px 0px;

@@ -45,8 +45,10 @@ public class BookService : IBookService
         var book = await _bookRepository.GetBookByIdAsync(id);
         if (book == null) return null;
         
-        _mapper.Map(bookDto, book);
+        var updatedBook = _mapper.Map<Book>(bookDto);
+        await _bookRepository.UpdateBookAsync(id, updatedBook);
         
+        Console.WriteLine(updatedBook.Id);
         return _mapper.Map<BookResponseDto>(book);
     }
 

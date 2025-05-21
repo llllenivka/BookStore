@@ -9,7 +9,7 @@
 
 
 .btn-violet {
-    background-color: rgb(120,76,192);
+    background: linear-gradient(90deg,rgba(140, 107, 211, 1) 35%, rgba(179, 143, 228, 1) 100%);
     color: white;
     border: 0px;
     
@@ -23,8 +23,10 @@
 }
 
 .btn-orange {
-    background-color: white;
-    border: 2px solid rgb(242,131,138);
+    background-color: rgb(235,212,233);
+
+    border: 0;
+    border: 1px solid rgb(242,131,138);
     color: rgb(242,131,138);
 
     border-radius: 5px;

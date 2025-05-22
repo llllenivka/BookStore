@@ -37,8 +37,6 @@ public class BookRepository : IBookRepository
         var bookToUpdate = await _context.Books.FindAsync(id);
         if (bookToUpdate == null) return null;
 
-        // Console.WriteLine(book.Id);
-        // _context.Entry(bookToUpdate).CurrentValues.SetValues(book);
         bookToUpdate.Title = book.Title;
         bookToUpdate.Author = book.Author;
         bookToUpdate.Description = book.Description;

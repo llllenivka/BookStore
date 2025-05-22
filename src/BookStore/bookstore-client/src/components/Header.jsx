@@ -1,5 +1,6 @@
 import './../css/Header.css'
 import { useNavigate } from 'react-router-dom';
+// import loginImage from '../assets/images/loginImage.jpg'
 
 
 function Header() {
@@ -12,11 +13,13 @@ function Header() {
 
     return (
         <div className="header frame-violet">
-            <h1 className='txt-violet' onClick={handleHomeClick}>bookly</h1>
-            <input type='text' value={"Найти на сайте"} className='frame-pink '></input>
-            <button className='header-button'>Избранное</button>
-            <button className='header-button'>Корзина</button>
-            <button className="header-btn-login header-button">Вход</button>
+            <h1 className='logo txt-violet' onClick={handleHomeClick}>bookly</h1>
+            <input className='search-bar' type='text'  placeholder='Найти...'></input>
+            <div className='icons'>
+                <span>Избранное</span>
+                <span>Корзина</span>
+                <span>Вход</span>
+            </div>
         </div>
     );
 }

@@ -11,14 +11,18 @@ function Header() {
         navigate(`/`);
     };
 
+    const handleRegisterClick = () => {
+        navigate(`/register/`);
+    };
+
     return (
-        <div className="header frame-violet">
-            <h1 className='logo txt-violet' onClick={handleHomeClick}>bookly</h1>
-            <input className='search-bar' type='text'  placeholder='Найти...'></input>
-            <div className='icons'>
-                <span>Избранное</span>
-                <span>Корзина</span>
-                <span>Вход</span>
+        <div class="site-header background--primary">
+            <h1 class='site-header__logo text--light' onClick={handleHomeClick}>bookly</h1>
+            <input class='input site-header__search' type='text'  placeholder='Найти...'></input>
+            <div class='site-header__action-icon'>
+                <span class="text--light">Избранное</span>
+                <span class="text--light">Корзина</span>
+                <span class="text--light" onClick={handleRegisterClick}>Вход</span>
             </div>
         </div>
     );

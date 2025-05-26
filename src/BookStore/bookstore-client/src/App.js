@@ -3,17 +3,33 @@ import './css/App.css';
 import {Routes, Route} from 'react-router-dom';
 import BookDetailsPage from './components/BookDetailsPage';
 import Header from './components/Header';
+// import LoginModal from './components/LoginModal';
+import RegisterModal from './components/RegisterModal';
 
 
 
 
 function App() {
   return (
-    <div className='app'>
-      <Header></Header>
+    <div className='app-container'>
+      {/* <Header /> */}
+      {/* <LoginModal></LoginModal> */}
       <Routes>
-        <Route path='/' element={ <BookList />}></Route>
-        <Route path=":id" element={<BookDetailsPage />} />
+        <Route path='/register/' element={<RegisterModal></RegisterModal>}></Route>
+        
+        <Route path='/' element={
+          <>
+            <Header />
+            <BookList />
+          </>
+        }/>
+
+        <Route path=":id" element={
+          <>
+            <Header />
+            <BookDetailsPage />
+          </>
+        } />
       </Routes>
     </div>
   )

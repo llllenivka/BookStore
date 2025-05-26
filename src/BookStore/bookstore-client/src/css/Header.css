@@ -1,58 +1,47 @@
-.header {
+.site-header {
     margin: 25px;
     height: 70px;
-    
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     padding: 10px 15px;
     justify-content: space-between;
-    
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
-.logo {
+/* Логотип */
+.site-header__logo {
     font-size: 35px;
     font-weight: bold;
     margin-right: 15px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-
     cursor: pointer;
 }
 
-.text_input {
-    padding: 2px;
-}
-
-
-.search-bar {
-    background-color: #ecd2f6;
-    color:  #916ed8;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-
+/* Поле поиска */
+.site-header__search {
     flex-grow: 2;
     height: 30px;
-    
     border: none;
-    border-radius: 20px;
-    
-    padding: 10px 15px;
-    /* margin: 0px 5%; */
-    font-size: 16px;
-    
-    outline: none;
+    padding: 8px 12px;
 }
 
-.icons {
+/* Контейнер иконок */
+.site-header__actions {
     display: flex;
     gap: 10px;
     margin-left: 15px;
 }
 
-.icons span {
+/* Элементы иконок */
+.site-header__action-icon {
     font-size: 20px;
     color: #ecd2f6;
     cursor: pointer;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.site-header__action-icon:hover {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }

@@ -1,42 +1,72 @@
-.book-details-page {
-    margin: 25px
+/* Страница деталей книги */
+.book-detail {
+    margin: 2rem;
 }
 
-.book-details-page__title h1,
-.book-details-page__title h2 {
-    margin: 10px 0px;
+/* Заголовок страницы */
+.book-detail__header {
+    margin-bottom: 2rem;
 }
 
-.book-details-page__content {
+.book-detail__title {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.book-detail__subtitle {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #555;
+    font-weight: normal;
+}
+
+/* Основное содержимое */
+.book-detail__content {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: minmax(250px, 1fr) 2fr minmax(250px, 1fr);
+    gap: 1.5rem;
 }
 
-.book-details-page__image {
+/* Блок с изображением */
+.book-detail__cover {
     height: 400px;
-    margin: 15px 15px 15px 0px;
-
+    border-radius: 8px;
     object-fit: cover;
 }
 
-
-
-.book-details-page__price {
-
-    /* background-color: white; */
-
-    height: 120px;
-    min-width: 200px;
-    margin: 15px 15px;
-    padding: 15px;
+/* Блок с ценой и покупкой */
+.book-detail__purchase {
+    background: #f8f9fa;
     border-radius: 15px;
-
+    padding: 1.5rem;
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    align-content: start;
+    height: min-content;
+    position: sticky;
+    top: 1rem;
 }
 
-.book-details-page__details {
+/* Блок с деталями книги */
+.book-detail__info {
     border-radius: 15px;
-    padding: 20px;
-    margin: 15px 0px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .book-detail__content {
+        grid-template-columns: 1fr;
+    }
+    
+    .book-detail__cover {
+        justify-self: center;
+    }
+    
+    .book-detail__purchase {
+        position: static;
+    }
 }

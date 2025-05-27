@@ -4,7 +4,8 @@ import {Routes, Route} from 'react-router-dom';
 import BookDetailsPage from './components/BookDetailsPage';
 import Header from './components/Header';
 // import LoginModal from './components/LoginModal';
-import RegisterModal from './components/RegisterModal';
+// import RegisterModal from './components/RegisterModal';
+import AuthModal from './components/AuthModal';
 
 
 
@@ -15,8 +16,8 @@ function App() {
       {/* <Header /> */}
       {/* <LoginModal></LoginModal> */}
       <Routes>
-        <Route path='/register/' element={<RegisterModal></RegisterModal>}></Route>
-        
+        <Route path='/login/' element={<AuthModal/>}></Route>
+  
         <Route path='/' element={
           <>
             <Header />

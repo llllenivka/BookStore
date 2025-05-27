@@ -20,6 +20,7 @@
 
 /* Поле поиска */
 .site-header__search {
+    max-width: 500px;
     flex-grow: 2;
     height: 30px;
     border: none;
@@ -31,16 +32,18 @@
     display: flex;
     gap: 10px;
     margin-left: 15px;
+    justify-content: space-between;
+    font-size: larger;
 }
 
 /* Элементы иконок */
 .site-header__action-icon {
     font-size: 20px;
-    color: #ecd2f6;
     cursor: pointer;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
 }
+
 
 .site-header__action-icon:hover {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);

@@ -97,7 +97,8 @@ public static class ServiceCollectionExtensions
                 policy => policy
                     .WithOrigins("http://localhost:3000")
                     .AllowAnyMethod()
-                    .AllowAnyHeader());
+                    .AllowAnyHeader()
+                    .AllowCredentials());
         });
         
         return services;

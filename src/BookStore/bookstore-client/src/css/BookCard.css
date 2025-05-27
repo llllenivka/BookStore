@@ -29,11 +29,9 @@
 }
 
 .book-card__actions {
-    /* height: 10%;
-    width: 90%; */
-
-
+    text-align: center;
+    font-size: large;
     display: grid;
-    grid-template-columns: 80% 20%;
-    /* gap: 5px */
+    grid-template-columns: 130px 60px;
+    gap: 5px
 }
